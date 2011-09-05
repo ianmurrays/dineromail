@@ -67,6 +67,16 @@ module DineromailHelper
       html << content_tag(:input, nil, :type => 'hidden', :name => 'buyer_message', :value => '1')
       
       
+      html << content_tag(:input, nil, :type => 'hidden', :name => 'buyer_name', :value => '')
+      html << content_tag(:input, nil, :type => 'hidden', :name => 'buyer_lastname', :value => '')
+      html << content_tag(:input, nil, :type => 'hidden', :name => 'buyer_email', :value => '')
+      html << content_tag(:input, nil, :type => 'hidden', :name => 'buyer_zip_code', :value => '')
+      html << content_tag(:input, nil, :type => 'hidden', :name => 'buyer_street', :value => '')
+      html << content_tag(:input, nil, :type => 'hidden', :name => 'buyer_city', :value => '')
+      html << content_tag(:input, nil, :type => 'hidden', :name => 'buyer_state', :value => '')
+      html << content_tag(:input, nil, :type => 'hidden', :name => 'buyer_nacionality', :value => 'CHL')
+      
+      
       # The one product (this is a cart)
       html << content_tag(:input, nil, :type => 'hidden', :name => 'item_code_1', :value => item_code)
       html << content_tag(:input, nil, :type => 'hidden', :name => 'item_name_1', :value => item_name)
