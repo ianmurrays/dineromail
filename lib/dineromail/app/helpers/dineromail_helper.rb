@@ -48,7 +48,7 @@ module DineromailHelper
       html << content_tag(:input, nil, :type => 'hidden', :name => 'merchant', :value => account_number)
       html << content_tag(:input, nil, :type => 'hidden', :name => 'country_id', :value => '3')
       html << content_tag(:input, nil, :type => 'hidden', :name => 'seller_name', :value => seller_name) if seller_name
-      html << content_tag(:input, nil, :type => 'hidden', :name => 'language', :value => 'es')
+      html << content_tag(:input, nil, :type => 'hidden', :name => 'languge', :value => 'es')
       html << content_tag(:input, nil, :type => 'hidden', :name => 'transaction_id', :value => transaction_id) if transaction_id
       html << content_tag(:input, nil, :type => 'hidden', :name => 'currency', :value => currency)
       html << content_tag(:input, nil, :type => 'hidden', :name => 'ok_url', :value => return_url)
@@ -56,6 +56,16 @@ module DineromailHelper
       html << content_tag(:input, nil, :type => 'hidden', :name => 'pending_url', :value => pending_url)
       html << content_tag(:input, nil, :type => 'hidden', :name => 'payment_method_available', :value => pay_methods)
       html << content_tag(:input, nil, :type => 'hidden', :name => 'change_quantity', :value => '0')
+      
+      # Adding all fields
+      html << content_tag(:input, nil, :type => 'hidden', :name => 'header_width', :value => '1')
+      html << content_tag(:input, nil, :type => 'hidden', :name => 'display_shipping', :value => '0')
+      html << content_tag(:input, nil, :type => 'hidden', :name => 'expanded_step_PM', :value => '1')
+      html << content_tag(:input, nil, :type => 'hidden', :name => 'expanded_step_AD', :value => '0')
+      html << content_tag(:input, nil, :type => 'hidden', :name => 'expanded_step_SC', :value => '0')
+      html << content_tag(:input, nil, :type => 'hidden', :name => 'expanded_sale_detail', :value => '0')
+      html << content_tag(:input, nil, :type => 'hidden', :name => 'buyer_message', :value => '1')
+      
       
       # The one product (this is a cart)
       html << content_tag(:input, nil, :type => 'hidden', :name => 'item_code_1', :value => item_code)
