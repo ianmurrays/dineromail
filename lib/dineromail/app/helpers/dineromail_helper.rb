@@ -44,24 +44,25 @@ module DineromailHelper
       # html << content_tag(:input,nil, :type => 'hidden', :name => 'MediosPago', :value => pay_methods)
       # html << content_tag(:input,nil, :type => 'hidden', :name => 'NroItem', :value => item_number) if item_number
       # html << content_tag(:input,nil, :type => 'hidden', :name => 'TRX_ID', :value => transaction_id) if transaction_id
-      html << content_tag(:input,nil, :type => 'hidden', :name => 'tool', :value => 'cart')
-      html << content_tag(:input,nil, :type => 'hidden', :name => 'merchant', :value => account_number)
-      html << content_tag(:input,nil, :type => 'hidden', :name => 'country_id', :value => '3')
-      html << content_tag(:input,nil, :type => 'hidden', :name => 'seller_name', :value => seller_name) if seller_name
-      html << content_tag(:input,nil, :type => 'hidden', :name => 'language', :value => 'es')
-      html << content_tag(:input,nil, :type => 'hidden', :name => 'transaction_id', :value => transaction_id) if transaction_id
-      html << content_tag(:input,nil, :type => 'hidden', :name => 'currency', :value => currency)
-      html << content_tag(:input,nil, :type => 'hidden', :name => 'ok_url', :value => return_url)
-      html << content_tag(:input,nil, :type => 'hidden', :name => 'error_url', :value => error_url)
-      html << content_tag(:input,nil, :type => 'hidden', :name => 'pending_url', :value => pending_url)
-      html << content_tag(:input,nil, :type => 'hidden', :name => 'payment_method_available', :value => 'cl_amex;cl_diners;cl_dm;cl_magna;cl_master;cl_presto;cl_ripley;cl_visa')
+      html << content_tag(:input, nil, :type => 'hidden', :name => 'tool', :value => 'cart')
+      html << content_tag(:input, nil, :type => 'hidden', :name => 'merchant', :value => account_number)
+      html << content_tag(:input, nil, :type => 'hidden', :name => 'country_id', :value => '3')
+      html << content_tag(:input, nil, :type => 'hidden', :name => 'seller_name', :value => seller_name) if seller_name
+      html << content_tag(:input, nil, :type => 'hidden', :name => 'language', :value => 'es')
+      html << content_tag(:input, nil, :type => 'hidden', :name => 'transaction_id', :value => transaction_id) if transaction_id
+      html << content_tag(:input, nil, :type => 'hidden', :name => 'currency', :value => currency)
+      html << content_tag(:input, nil, :type => 'hidden', :name => 'ok_url', :value => return_url)
+      html << content_tag(:input, nil, :type => 'hidden', :name => 'error_url', :value => error_url)
+      html << content_tag(:input, nil, :type => 'hidden', :name => 'pending_url', :value => pending_url)
+      html << content_tag(:input, nil, :type => 'hidden', :name => 'payment_method_available', :value => pay_methods)
+      html << content_tag(:input, nil, :type => 'hidden', :name => 'change_quantity', :value => '0')
       
       # The one product (this is a cart)
-      html << content_tag(:input,nil, :type => 'hidden', :name => 'item_code_1', :value => item_code)
-      html << content_tag(:input,nil, :type => 'hidden', :name => 'item_name_1', :value => item_name)
-      html << content_tag(:input,nil, :type => 'hidden', :name => 'item_ammount_1', :value => amount)
-      html << content_tag(:input,nil, :type => 'hidden', :name => 'item_quantity_1', :value => '1')
-      html << content_tag(:input,nil, :type => 'hidden', :name => 'item_currency_1', :value => 'CLP')
+      html << content_tag(:input, nil, :type => 'hidden', :name => 'item_code_1', :value => item_code)
+      html << content_tag(:input, nil, :type => 'hidden', :name => 'item_name_1', :value => item_name)
+      html << content_tag(:input, nil, :type => 'hidden', :name => 'item_ammount_1', :value => amount)
+      html << content_tag(:input, nil, :type => 'hidden', :name => 'item_quantity_1', :value => '1')
+      html << content_tag(:input, nil, :type => 'hidden', :name => 'item_currency_1', :value => 'CLP')
     end
   end  
   
