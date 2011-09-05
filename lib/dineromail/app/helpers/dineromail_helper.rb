@@ -5,11 +5,13 @@ module DineromailHelper
     button_image_url = options.delete(:button_image_url) || Dineromail.configuration.button_image_url
     payment_url = options.delete(:payment_url) || Dineromail.configuration.payment_url
     form_options = options.delete(:form) || {}
+    button_class = options.delete(:button_class)
     form_options[:action] = payment_url
     content_tag(:form, form_options ) do
       ''.html_safe.tap do |html|
         html << dineromail_inputs(item_name,amount,options)
-        html << content_tag(:input,nil, :type => 'image', :src => button_image_url, :border => '0', :name=> 'submit', :alt=>'Pagar con Dineromail' )
+        # html << content_tag(:input,nil, :type => 'image', :src => button_image_url, :border => '0', :name=> 'submit', :alt=>'Pagar con Dineromail' )
+        html << content_tag(:button, "Pagar con Dineromail", :type => :submit, :class => button_class)
       end
     end
   end
