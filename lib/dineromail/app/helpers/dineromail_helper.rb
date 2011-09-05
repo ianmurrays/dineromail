@@ -22,7 +22,7 @@ module DineromailHelper
     logo_url =  options[:logo_url] || Dineromail.configuration.logo_url
     return_url =  options[:return_url] || Dineromail.configuration.return_url
     error_url =  options[:error_url] || Dineromail.configuration.error_url
-    pending_url = options[:pending_url]
+    pending_url = options[:pending_url] || Dineromail.configuration.pending_url
     message =  options[:message] ? 1 : 0
     account_number =  options[:account_number] || Dineromail.configuration.account_number
     pay_methods = options[:pay_methods] || Dineromail.configuration.pay_methods
